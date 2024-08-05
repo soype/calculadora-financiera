@@ -99,6 +99,23 @@
     }
   }
 
+  .submit{
+    border-radius: 1rem;
+    border: none;
+    background: $color-lime;
+    // text-align: left;
+    color: $color-slate-900;
+    font-weight: 700;
+    padding: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background: $color-lime-dark;
+      color: $color-slate-900;
+    }
+  }
+
   .error{
     margin: 0;
     padding: 0;
