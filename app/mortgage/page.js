@@ -8,13 +8,16 @@ export default async function Mortgage() {
   const res = await fetch(`${baseUrl}/api/getMortgage`);
   const data = await res.json();
 
+  const getResult = await fetch(`${baseUrl}/api/getResult`);
+  const result = await getResult.json();
+
   return (
     <div className={styles["mortgage-container"]}>
       <Calculator
         title={data.calculator.title}
         form={data.calculator.form}
       ></Calculator>
-      <Results></Results>
+      <Results result={result}></Results>
     </div>
   );
 }
